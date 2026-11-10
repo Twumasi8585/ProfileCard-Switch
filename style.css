@@ -1,0 +1,368 @@
+:root{
+    --base-color: #f7f4ef;
+    --text-color: #353f4d;
+}
+
+.darkmode{
+    --base-color: #353f4d;
+    --text-color: #f7f4ef; 
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Eastman Trial', sans-serif;
+    font-family: 'Colasta', sans-serif;
+    font-family: 'Colasta Thin', sans-serif;
+    font-family: 'Colasta Light', sans-serif; 
+    font-family: 'Colasta Black', sans-serif;
+                                                
+                                                
+}
+
+body{
+    background-color: var(--base-color);
+}
+
+
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: var(--base-color);
+  width: 450px;
+  height: 450px;
+  padding: 35px;
+  border-radius: 5px;
+  box-shadow: 6px 5px 30px 18px rgba(0,0,0,0.3);
+}
+
+#Prof1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--text-color);
+}
+
+#setting{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--text-color);
+}
+
+#switch1{
+    background: var(--text-color);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+#switch1 #sun{
+  display: none;
+}
+
+.darkmode #switch1 #moon{
+    display: none;
+}
+
+.darkmode #switch1 #sun{
+    display: block;
+}
+
+
+.card1 h1{
+    color: var(--text-color);
+}
+
+.card1 h4{
+    font-family: 'Eastman Trial', sans-serif;
+    line-height: 20px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+
+button{
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Eastman Trial', sans-serif;
+    background: var(--text-color);
+    color: var(--base-color);
+    font-size: 15px;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.card1 h6{
+    font-family: 'Eastman Trial', sans-serif;
+    color: var(--text-color);
+    margin-top: 15px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.card1 a{
+    text-decoration: none;
+    font-family:'Eastman Trial', sans-serif;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+/* Large desktops and monitors */
+@media screen and (min-width: 1200px) {
+    .card {
+        width: 480px;
+        height: 470px;
+        padding: 40px;
+    }
+
+    #Prof1 {
+        width: 110px;
+        height: 110px;
+    }
+
+    .card1 h1 {
+        font-size: 28px;
+    }
+
+    .card1 h4 {
+        font-size: 16px;
+    }
+}
+
+/* Laptops and small desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .card {
+        width: 450px;
+        height: 450px;
+        padding: 35px;
+    }
+}
+
+/* Tablets and iPads */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 420px;
+        height: 440px;
+        padding: 30px;
+    }
+
+    #Prof1 {
+        width: 95px;
+        height: 95px;
+    }
+
+    .card1 h1 {
+        font-size: 25px;
+    }
+
+    .card1 h4 {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 15px;
+    }
+
+    button {
+        width: 180px;
+        height: 43px;
+    }
+}
+
+/* Large mobile phones */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .card {
+        width: 90%;
+        max-width: 420px;
+        height: auto;
+        min-height: 420px;
+        padding: 30px 20px;
+    }
+
+    #Prof1 {
+        width: 90px;
+        height: 90px;
+    }
+
+    #setting {
+        top: 15px;
+        left: 15px;
+    }
+
+    #switch1 {
+        width: 35px;
+        height: 35px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .card1 h1 {
+        font-size: 23px;
+        margin-top: 10px;
+    }
+
+    .card1 h4 {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+
+    button {
+        width: 180px;
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .card1 a {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 480px) {
+    .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: calc(100% - 30px);
+        max-width: 360px;
+        height: auto;
+        min-height: 400px;
+
+        padding: 35px 18px;
+        border-radius: 10px;
+    }
+
+    #Prof1 {
+        width: 85px;
+        height: 85px;
+    }
+
+    #setting {
+        top: 15px;
+        left: 15px;
+        font-size: 15px;
+    }
+
+    #switch1 {
+        width: 35px;
+        height: 35px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .card1 h1 {
+        font-size: 21px;
+        line-height: 28px;
+        margin-top: 10px;
+    }
+
+    .card1 h4 {
+        font-size: 12px;
+        line-height: 19px;
+        margin-top: 12px;
+    }
+
+    button {
+        width: 85%;
+        max-width: 200px;
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .card1 h6 {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .card1 a {
+        display: inline-block;
+        font-size: 11px;
+        margin-top: 10px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Extra small mobile phones */
+@media screen and (max-width: 320px) {
+    .card {
+        width: calc(100% - 20px);
+        padding: 35px 12px;
+        min-height: 380px;
+    }
+
+    #Prof1 {
+        width: 75px;
+        height: 75px;
+    }
+
+    .card1 h1 {
+        font-size: 18px;
+    }
+
+    .card1 h4 {
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+    .card1 a {
+        font-size: 10px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 13px;
+    }
+}
+
+/* Short screens and landscape mobile devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .card {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+
+        margin: 20px auto;
+        width: min(90%, 450px);
+        height: auto;
+        min-height: 0;
+        padding: 25px;
+    }
+
+    #Prof1 {
+        width: 65px;
+        height: 65px;
+    }
+
+    .card1 h4 {
+        margin-top: 10px;
+    }
+}
+
+
